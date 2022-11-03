@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style-product.css">
+    <title>Đăng nhập - Levents</title>
+</head>
+<body>
+<div class="navbar">
+        <div class="navbar-logo"><a href="../index.html"><img src="../img/logo.png" alt=""></a></div>
+        <div class="navbar-icon">
+            <ul class="navbar-icon_lists">
+                <li class="navbar-icon_item"><a href="#"><ion-icon name="notifications-outline"></ion-icon></a></li>
+                <li class="navbar-icon_item"><a href="#"><ion-icon name="search-outline"></ion-icon></a></li>
+                <li class="navbar-icon_item navbar-icon_bag"><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
+                <li class="navbar-icon_item"><a href="../login.html"><ion-icon name="person-outline"></ion-icon></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-menu">
+        <ul class="navbar-menu_lists">
+            <li class="navbar-menu_item navbar-menu_item-dropdown"><a href="#">Shop</a> 
+                <ion-icon class="arrow-down" name="chevron-down-outline"></ion-icon>
+                <div class="dropdown-menu">
+                    <ul class="dropdown-menu-lists">
+                        <li class="dropdown-menu-item">
+                            <a href="#">Tất cả</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">New Arrival</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Áo thun</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Quần</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Ba-lo</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Outwear</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Phụ kiện</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="navbar-menu_item navbar-menu_item-underline navbar-menu_item-active"><a href="#">Sale-off</a></li>
+            <li class="navbar-menu_item navbar-menu_item-underline"><a href="#">Collection</a></li>
+            <li class="navbar-menu_item navbar-menu_item-underline"><a href="#">About</a></li>
+        </ul>
+    </div>
+    <!-- add-to-cart -->
+    <div class="container-add-to-cart" id="show-itemBag">
+        <div class="title-atc">
+            <h3 class="name-cart">Gỏi Hàng</h3>
+            <p class="close-atc" onclick="showBag()">Close</p>
+        </div>
+        <div class="atc-bag"></div>
+        <div class="total-atc">
+            <h3 class="needPay"></h3>
+            <h3 class="total-product">Tổng: &nbsp;</h3>
+        </div>
+        
+    </div>
+    <!-- img-product -->
+    <div class="container-product">
+        <div class="img-product">
+            <img src="../img/pr1.png" alt="">
+        </div>
+        <div class="detail-product">
+            <div class="col-product boil-title name-product"> <h3>LEVENTS® | DORAEMON POPULAR CAT TEE</h3> </div>
+            <div class="col-product light-title price-product" id="price"> <h3>395,000 vnđ</h3> </div>
+            <div class="col-product light-title color-product">
+                <p>Màu sắc: GREY</p>
+            </div>
+            <div class="col-product light-title size-product">
+                <p>Size:</p>
+                <br>
+                <select name="size-shirt" id="size-shirt" onchange="getSelection();">
+                    <option value selected disabled>SIZE 1</option>
+                    <option value="SIZE 2">SIZE 2</option>
+                    <option value="SIZE 3">SIZE 3</option>
+                    <option value="SIZE 4">SIZE 4</option>
+                </select>
+            </div>
+            <div class="col-product light-title amount-product"></div>
+            <div class="col-product light-title buy-product">
+                <button type="submit" class="button-submit">Thêm vào giỏ</button>
+            </div>
+            <div class="boil-title information-product" id="information-product">
+                <button onclick="showInfo()">Thông tin</button>
+                <div class="information-product-detail" id="information-product-detail">
+                    <p class="light-title">
+                        LEVENTS® | DORAEMON POPULAR CAT TEE
+                        <br>
+                        MATERIAL: LÌ VEN ORIGINAL – Phiên bản bề mặt vải không đổ lông mang cảm giác thoáng mát
+                        <br>
+                        SIZE: 1/2/3/4
+                        <br>
+                        Sản phẩm thuộc Special Collection “Make everything popular” DORAEMON | LEVENTS®
+                    </p>
+                </div> 
+            </div>
+            <div class="boil-title information-product">
+                <button onclick="showSize()">Bảng Size</button>
+                <div class="information-product-detail" id="information-product-size">
+                    <p class="light-title">
+                        Form áo được Fit size theo form và tiêu chuẩn tương đối của người Việt Nam, nếu bạn đang cân nhắc giữa hai size, nên chọn size lớn hơn.
+                        <br>
+                        <br>
+                        Size 1: Chiều cao từ 1m50 – 1m65, cân nặng trên 55kg <br>
+                        Size 2: Chiều cao từ 1m65 – 1m72, cân nặng dưới 65kg <br>
+                        Size 3: Chiều cao từ 1m70 – 1m77, cân nặng dưới 80kg <br>
+                        Size 4: Chiều cao trên 1m72, cân nặng dưới 95kg. <br>
+                    </p>
+                    <img src="../img/Website-Popular-cat-tee-Mau-xam-100.jpg" alt="">
+                </div> 
+            </div>
+            <div class="boil-title information-product">
+                <button onclick="showRefund()">Quy định đổi trả</button>
+                <div class="information-product-detail" id="information-product-refund">
+                    <p class="light-title">
+                        Nhằm mang lại cho bạn sự tiện lợi và những trải nghiệm tuyệt vời khi mua hàng, tụi mình đã phát triển dịch vụ đổi hàng tận nơi và chính sách bảo hành.
+                    </p>
+                </div> 
+            </div>
+
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="introduce-store">
+            <div class="introduce-store-left">
+                <h3 class="title-boid title-left">VỀ CHÚNG TÔI</h3>
+                <p class="title-light">Levents® – Popular Streetwear Brand</p>
+                <p class="title-light title-margin">HỘ KINH DOANH Levents
+                    <br>
+                    GPKD được cấp bởi Ủy ban nhân dân Quận 1– TP Hồ Chí Minh
+                    <br>
+                    Mã số thuế: 8547618080
+                    <br>
+                    Ngày cấp: 07/12/2020</p>
+            </div>
+            <div class="introduce-store-right">
+                <div class="contract">
+                    <ul class="contract-list">
+                        <li class="contract-detail">
+                            <h3 class="title-boid">LIÊN HỆ</h3>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>        
+                    </ul>
+                </div>
+                <div class="store">
+                    <ul class="contract-list">
+                        <li class="contract-detail">
+                            <h3 class="title-boid">LIÊN HỆ</h3>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>  
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>          
+                    </ul>
+                </div>
+                <div class="support">
+                    <ul class="contract-list">
+                        <li class="contract-detail">
+                            <h3 class="title-boid">LIÊN HỆ</h3>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>   
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>      
+                    </ul>
+                </div>
+                <div class="expand">
+                    <ul class="contract-list">
+                        <li class="contract-detail">
+                            <h3 class="title-boid">LIÊN HỆ</h3>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>   
+                        <li class="contract-detail">
+                            <p class="title-light">Hotline</p>
+                            <p class="title-boild title-boid-size">1900 633 028</p>
+                        </li>      
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/product-main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/addCard.js"></script>
+</body>
+</html>
