@@ -14,10 +14,17 @@
         <div class="navbar-icon">
             <ul class="navbar-icon_lists">
                 <li class="navbar-icon_item"><a href="#"><ion-icon name="notifications-outline"></ion-icon></a></li>
-                <li class="navbar-icon_item"><a href="#"><ion-icon name="search-outline"></ion-icon></a></li>
+                <li class="navbar-icon_item navbar-icon_search"><a href="#"><ion-icon name="search-outline"></ion-icon></a></li>
                 <li class="navbar-icon_item navbar-icon_bag"><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
                 <li class="navbar-icon_item"><a href="./login.html"><ion-icon name="person-outline"></ion-icon></a></li>
             </ul>
+        </div>
+    </div>
+    <div class="search-box hide-search">
+        <div class="search-close"><ion-icon name="close-outline"></ion-icon></div>
+        <div class="search-buttons">
+            <input type="text" id="search-text">
+            <input type="submit" value="Search" id="search-btn">
         </div>
     </div>
     <div class="navbar-menu">
@@ -292,5 +299,6 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./js/addCard.js"></script>
+    <script src="./js/searchMain.js"></script>
 </body>
 </html>

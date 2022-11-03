@@ -85,6 +85,49 @@ a{
     position: relative;
     height: 20px;
 }
+/* custom-search */
+.search-box{
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #000;
+    z-index: 2;
+    transition: .8s ease-in;
+}
+.search-buttons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+#search-text{
+    border: 1px solid #000;
+    outline: none;
+    width: 100rem;
+    margin-right: 20px;
+    height: 50px;
+    padding-left: 30px;
+}
+#search-btn{
+    cursor: pointer;
+    width: 15rem;
+    height: 50px;
+    background-color: rgb(50, 50, 50);
+    color: #fff;
+}
+.search-close{
+    cursor: pointer;
+    float: right;
+}
+.search-close ion-icon{
+    font-size: 50px;
+}
+.hide-search{
+    opacity: 0;
+}
 .dropdown-menu{
     position: absolute;
     top: 300%;
