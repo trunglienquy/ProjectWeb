@@ -1,5 +1,6 @@
 const btn = document.querySelectorAll(".container-product .button-submit")
 let selection = document.querySelector('size-shirt');
+const hideInformationBag = document.querySelector('.notification-bag')
 
 btn.forEach(function(button,index){
     button.addEventListener("click",function(event){
@@ -17,6 +18,7 @@ btn.forEach(function(button,index){
 
 
 function addCart(productImg, productPrice, productName, textSizeName){
+    hideInformationBag.classList.add("hide")
     var addProduct = document.createElement("tr")
     var content ='<tr><td><img src="'+productImg+'"></td><td><h3>'+productName+'</h3></td><td><p class="atc-price-product">'+productPrice+'</p></td><td><p>SIZE: '+textSizeName+'</p></td><td><input type="number" value="1" min="1" max="999"></td></tr>'
     addProduct.innerHTML = content

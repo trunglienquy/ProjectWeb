@@ -269,15 +269,21 @@ input[type=number]::-webkit-inner-spin-button {
     cursor: pointer;
     margin: 0 10px;
     padding: 10px 20px;
-    border-radius: 10px;
+    font-size: 20px;
+}
+.paging-item:hover{
+    border-bottom: 1px solid #000;
+}
+.paging-icon:hover{
+    border: none;
 }
 .paging-item a{
     color: #000;
     font-weight: 500;
-
+    
 }
 .active{
-    background-color: orange;
+    border-bottom: 1px solid #000;
 }
 .paging-icon{
     border: none;

@@ -214,7 +214,16 @@ td input{
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
 }
-
+.notification-bag{
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+.information-notification{
+    font-size: 18px;
+    font-weight: 500;
+}
 
 
 .container-product{

@@ -324,6 +324,17 @@ td input{
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
 }
+.notification-bag{
+    text-align: center;
+}
+.hide{
+    color: red;
+}
+.information-notification{
+    font-size: 18px;
+    font-weight: 500;
+}
+
 
 footer{
     border-top: 1px solid #000;
