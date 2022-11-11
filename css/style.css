@@ -453,7 +453,7 @@ footer{
     .navbar-menu{
         position: absolute;
         height: 50rem;
-        left: -400px;
+        left: -600px;
     }
     .show-navbar-menu{
         left: 0;
@@ -492,6 +492,56 @@ footer{
         display: none;
     }
     .search-box{
-        display: none;
+        display: block;
+        top: 60px;
+    }
+    .search-buttons{
+        flex-direction: column;
+        max-width: 350px;
+    }
+    #search-text{
+        height: 40px;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    #search-btn{
+        height: 40px;
+    }
+    .search-close{
+        float: none;
+    }
+    .banner{
+        text-align: center;
+    }
+    .video-dk{
+        height: 20rem;
+        width: 100%;
+    }
+    .product{
+        padding: 0;
+    }
+    .btn-banner{
+        max-width: 250px;
+        bottom: 60px;
+        width: 90%;
+        font-size: 10px;
+    }
+    .name-product-item, .price-product-item{
+        text-align: center;
+    } 
+    /* footer */
+    footer{
+        height: 73rem;
+    }
+    .introduce-store{
+        flex-direction: column;
+        text-align: center;
+    }
+    .introduce-store-right{
+        margin-top: 200px;
+        flex-direction: column;
+    }
+    .social-media ion-icon{
+        font-size: 20px;
     }
 }
