@@ -494,6 +494,7 @@ footer{
     .search-box{
         display: block;
         top: 60px;
+        z-index: -1;
     }
     .search-buttons{
         flex-direction: column;

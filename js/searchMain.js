@@ -12,9 +12,12 @@ console.log(showSearch)
 
 showSearch.addEventListener("click", function(){
     searchBox.classList.remove("hide-search")
+    searchBox.style.zIndex = "100"
 })
 hideSearch.addEventListener("click", function(){
     searchBox.classList.add("hide-search")
+    searchBox.style.zIndex = "-100"
+
 })
 // menu-mobile
 showMenuMobile.addEventListener("click", function(){
@@ -28,6 +31,8 @@ hiddenMenuMobile.addEventListener("click", function(){
     hiddenMenuMobile.style.display = 'none'
 })
 // show sub-menu
+console.log(btnSubmenu)
+console.log(subMenu)
 btnSubmenu.addEventListener("click", function(){
     subMenu.style.display = "block"
     btnSubmenuUp.style.display = "block"
