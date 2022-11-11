@@ -13,6 +13,9 @@
         <div class="menu-mobile">
             <ion-icon name="menu-outline"></ion-icon>
         </div>
+        <div class="menu-mobile-close menu-mobile">
+            <ion-icon name="close-outline"></ion-icon>
+        </div>
         <div class="navbar-logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
         <div class="navbar-icon">
             <ul class="navbar-icon_lists">
@@ -30,11 +33,37 @@
             <input type="submit" value="Search" id="search-btn">
         </div>
     </div>
-    <div class="navbar-menu">
+    <div class="navbar-menu" id="navbar-menu-mobile">
         <ul class="navbar-menu_lists">
             <li class="navbar-menu_item navbar-menu_item-dropdown"><a href="./all-product.html">Shop</a> 
-                <ion-icon class="arrow-down" name="chevron-down-outline"></ion-icon>
+                <ion-icon class="arrow-down" id="btn-dropdown-down" name="chevron-down-outline"></ion-icon>
+                <ion-icon class="arrow-up" name="chevron-up-outline"></ion-icon>
                 <div class="dropdown-menu">
+                    <ul class="dropdown-menu-lists">
+                        <li class="dropdown-menu-item">
+                            <a href="./all-product.html">Tất cả</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">New Arrival</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Áo thun</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Quần</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Ba-lo</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Outwear</a>
+                        </li>
+                        <li class="dropdown-menu-item">
+                            <a href="#">Phụ kiện</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown-menu-mobile">
                     <ul class="dropdown-menu-lists">
                         <li class="dropdown-menu-item">
                             <a href="./all-product.html">Tất cả</a>
@@ -163,7 +192,7 @@
     <div class="container-add-to-cart" id="show-itemBag">
         <div class="title-atc">
             <h3 class="name-cart">Gỏi Hàng</h3>
-            <p class="close-atc" onclick="showBag()">Close</p>
+            <p class="close-atc">Close</p>
         </div>
         <div class="notification-bag">
             <p class="information-notification">Hiện tại bạn không có đơn hàng nào</p>
@@ -217,17 +246,17 @@
                             <h3 class="title-boid">CỬA HÀNG</h3>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">325 Hoàng Sa, Tân Định,
+                            <p class="title-light title-boid-size">325 Hoàng Sa, Tân Định,
                                 quận 1, HCM</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">The New Playground, 04 Phạm Ngũ Lão, quận 1, HCM</p>
+                            <p class="title-light title-boid-size">The New Playground, 04 Phạm Ngũ Lão, quận 1, HCM</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">842 Sư Vạn Hạnh, phường 12, quận 10, HCM</p>
+                            <p class="title-light title-boid-size">842 Sư Vạn Hạnh, phường 12, quận 10, HCM</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">54 Mậu Thân, Xuân Khánh, quận Ninh Kiều, Cần Thơ</p>
+                            <p class="title-light title-boid-size">54 Mậu Thân, Xuân Khánh, quận Ninh Kiều, Cần Thơ</p>
                         </li>         
                     </ul>
                 </div>
@@ -237,26 +266,26 @@
                             <h3 class="title-boid">HỖ TRỢ</h3>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">LÌ VEN FABRIC</p>
+                            <p class="title-light title-boid-size">LÌ VEN FABRIC</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Tài khoản</p>
+                            <p class="title-light title-boid-size">Tài khoản</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Chính sách vận chuyển</p>
+                            <p class="title-light title-boid-size">Chính sách vận chuyển</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Thanh toán online</p>
+                            <p class="title-light title-boid-size">Thanh toán online</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Chính sách bảo mật thông tin
+                            <p class="title-light title-boid-size">Chính sách bảo mật thông tin
                             </p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Chính sách bảo hành</p>
+                            <p class="title-light title-boid-size">Chính sách bảo hành</p>
                         </li>   
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Chính sách khiếu nại</p>
+                            <p class="title-light title-boid-size">Chính sách khiếu nại</p>
                         </li>      
                     </ul>
                 </div>
@@ -266,10 +295,10 @@
                             <h3 class="title-boid">LIÊN HỆ</h3>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Tuyển Dụng</p>
+                            <p class="title-light title-boid-size">Tuyển Dụng</p>
                         </li>
                         <li class="contract-detail">
-                            <p class="title-boild title-boid-size">Blog</p>
+                            <p class="title-light title-boid-size">Blog</p>
                         </li>
                         <li class="contract-detail social-media">
                             <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>

@@ -38,7 +38,19 @@ a{
     left: 0;
     font-size: 20px;
     margin-left: 10px;
-    display: block;
+    display: none;
+}
+.menu-mobile-close{
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    margin-left: 10px;
+    display: none;
+}
+.arrow-up{
+    position: absolute;
+    top: 0;
+    display: none;
 }
 .navbar-icon_lists{
     display: flex;
@@ -90,7 +102,6 @@ a{
 }
 .navbar-menu_item-dropdown{
     position: relative;
-    height: 20px;
 }
 /* custom-search */
 .search-box{
@@ -149,6 +160,11 @@ a{
     opacity: 0;
     z-index: -1;
     transition: .8s ease-out;
+}
+.dropdown-menu-mobile{
+    margin-top: 20px;
+    margin-left: 30px;
+    display: none;
 }
 .navbar-menu_item-dropdown:hover .dropdown-menu{
     top: 120%; 
@@ -434,27 +450,43 @@ footer{
         justify-content: space-around;
         line-height: 60px;
     }
+    .navbar-menu{
+        position: absolute;
+        height: 50rem;
+        left: -400px;
+    }
+    .show-navbar-menu{
+        left: 0;
+    }
     .menu-mobile{
         position: relative;
         display: block;
+    }
+    .menu-mobile-close{
+        display: none;
+    }
+    .arrow-down{
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+    .arrow-up{
+        position: absolute;
+        top: 0;
+        right: 20px;
     }
     .navbar-menu_lists{
         margin-left: 25px;
         display: block;
         flex-direction: column;
-        left: 0;
-    }
-    .navbar-menu{
-        position: absolute;
         left: -400px;
-        background-color: aqua;
-        height: 45rem;
-    }
-    .show-navbar-menu{
-        left: 0;
+        margin-top: 20px;
     }
     .navbar-menu_item{
         margin-bottom: 30px;
+    }
+    .navbar-menu_item-dropdown:hover .dropdown-menu{
+        display: none;
     }
     .container-add-to-cart{
         display: none;
