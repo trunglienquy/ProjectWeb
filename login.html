@@ -12,27 +12,33 @@
         <div class="navbar-logo"><a href="index.html"><img src="./img/logo.png" alt=""></a></div>
         <div class="navbar-icon">
             <ul class="navbar-icon_lists">
-                <li class="navbar-icon_item"><a href="#"><ion-icon name="notifications-outline"></ion-icon></a></li>
-                <li class="navbar-icon_item"><a href="#"><ion-icon name="search-outline"></ion-icon></a></li>
+                <li class="navbar-icon_item navbar-icon_search"><a href="#"><ion-icon name="search-outline"></ion-icon></a></li>
                 <li class="navbar-icon_item"><a href="#"><ion-icon name="bag-handle-outline"></ion-icon></a></li>
                 <li class="navbar-icon_item"><a href="#"><ion-icon name="person-outline"></ion-icon></a></li>
             </ul>
         </div>
     </div>
+    <div class="search-box hide-search">
+        <div class="search-close"><ion-icon name="close-outline"></ion-icon></div>
+        <div class="search-buttons">
+            <input type="text" id="search-text">
+            <input type="submit" value="Search" id="search-btn">
+        </div>
+    </div>
     <div class="navbar-menu">
         <ul class="navbar-menu_lists">
-            <li class="navbar-menu_item navbar-menu_item-dropdown"><a href="#">Shop</a> 
+            <li class="navbar-menu_item navbar-menu_item-dropdown"><a href="./all-product.html">Shop</a> 
                 <ion-icon class="arrow-down" name="chevron-down-outline"></ion-icon>
                 <div class="dropdown-menu">
                     <ul class="dropdown-menu-lists">
                         <li class="dropdown-menu-item">
-                            <a href="#">Tất cả</a>
+                            <a href="./all-product.html">Tất cả</a>
                         </li>
                         <li class="dropdown-menu-item">
-                            <a href="#">New Arrival</a>
+                            <a href="./newArrival.html">New Arrival</a>
                         </li>
                         <li class="dropdown-menu-item">
-                            <a href="#">Áo thun</a>
+                            <a href="./tee-shirt.html">Áo thun</a>
                         </li>
                         <li class="dropdown-menu-item">
                             <a href="#">Quần</a>
@@ -50,15 +56,15 @@
                 </div>
             </li>
             <li class="navbar-menu_item navbar-menu_item-underline navbar-menu_item-active"><a href="#">Sale-off</a></li>
-            <li class="navbar-menu_item navbar-menu_item-underline"><a href="#">Collection</a></li>
-            <li class="navbar-menu_item navbar-menu_item-underline"><a href="#">About</a></li>
+            <li class="navbar-menu_item navbar-menu_item-underline"><a href="./collection.html">Collection</a></li>
+            <li class="navbar-menu_item navbar-menu_item-underline"><a href="./about.html">About</a></li>
         </ul>
     </div>
 
     <div class="login-form">
         <h3 class="login-form_title">ĐĂNG NHẬP</h3>
         <div class="login-form-detail">
-            <p class="login-form-detail_title">Bạn chưa có tài khoản?</p> <a href="register.html">Đăng ký</a>
+            <p class="login-form-detail_title">Bạn chưa có tài khoản?</p><a href="./register.html">Đăng ký</a>
         </div>
         <!-- <form action="login.php" method="post"> -->
         <form>
@@ -208,5 +214,6 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="./js/searchMain.js"></script>
 </body>
 </html>

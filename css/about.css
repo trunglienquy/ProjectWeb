@@ -8,6 +8,7 @@
 html{
     font-size: 14px;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 ul{
     list-style: none;
@@ -100,7 +101,7 @@ a{
 .navbar-menu_item-dropdown:hover .dropdown-menu{
     top: 120%; 
     color: red;
-    z-index: 1;
+    z-index: 3;
     opacity: 1;
 }
 .dropdown-menu-lists{
@@ -130,111 +131,132 @@ a{
     margin-bottom: 20px;
 }
 
-/* register */
-.register-form{
-    width: 600px;
-    height: 400px;
-    margin: 0 auto;
-    padding: 5rem 0;
-
-}
-.register-form_title{
+.container{
+    padding: 0 200px;
     text-align: center;
-    padding-bottom: 40px;
-    font-size: 20px;
+    margin-top: 5rem;
 }
-.user-style{
-    padding: 10px 0;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid #000;
-    font-size: 15px;
-    outline: none;
+.about-levent{
+    margin-bottom: 8rem;
 }
-.user-name, .user-email, .user-numberphone, .user-birthday, .user-pass, .user-conform-pass{
-    margin-bottom: 20px;
+.about-title-name{
+    margin-bottom: 40px;
 }
-.agree-policy{
+.sub-about-title-name{
+    font-family: 'Fuzzy Bubbles';
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+.sub2-about-title-name{
+    font-size: 16px;
+    width: 50rem;
+    margin: 0 auto;
+}
+.col-introduce{
+    margin-bottom: 10rem;
+    font-size: 18px;
+}
+.img-about img{
+    max-width: 100%;
+    margin-bottom: 10rem;
+}
+.text-about{
+    font-weight: 100;
     display: flex;
-    margin-top: 10px;
+    justify-content: space-around;
+    align-items: center;
 }
-.agree-policy-title{
-    margin-left: 5px;
+.title-left-about{
+    font-size: 40px;
+    width: 50rem;
 }
-.checkbox{
-    width: 16px;
+.title-right-about{
+    text-align: left;
+    width: 500px;
 }
-.submit{
-    margin: 30px 0;
+
+/* add-to-cart */
+.container-add-to-cart{
+    /* border: 1px solid #000; */
+    position: absolute;
+    display: block;
+    right: -100%;
+    top: 0;
+    width: 600px;
+    height: 80rem;
+    background-color: #fff;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 5;
+    transition: .5s ease-in;
+}
+.total-atc{
+    padding: 10px 50px;
+    border-top: 1px solid #000;
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    font-size: 15px;
+}
+.needPay{
+    float: right;
+}
+.total-product{
+    float: right;
+}
+#show-itemBag::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+#show-itemBag::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #fff;
+}
+
+#show-itemBag::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: rgb(86, 86, 86);
+}
+.title-atc{
+    font-size: 15px;
+    padding: 30px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
-.submit a{
-    color: #009eff;
-    transition: .8s ease;
-}
-.submit a:hover{
-    color: #000;
-}
-.user-submit{
-    position: relative;
+.title-atc p{
     cursor: pointer;
-    border: none;
-    padding: 10px 70px;
-    background-color: #000;
-    color: #fff;
-    transition: 1s ease-out;
 }
-.user-submit:hover{
-    box-shadow: 3px 5px rgb(117, 117, 117);
-}
-.note-pass{
+tr{
+    text-align: center;
     display: flex;
-    margin-top: 30px;
+    flex-direction: column;
 }
-.note-pass-selection{
-    position: relative;
-    cursor: pointer;
-    width: 18px;
-    height: 18px;
-    border: 1px solid rgb(117, 117, 117);
+td{
+    margin-bottom: 20px;
 }
-.note-pass-selection::after{
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    background-color: #000;
-    left: 50%;
-    right: 50%;
-    transition: width .3s ease 0s, left .3s ease 0s;
+td h3{
+    font-size: 15px;
 }
-.note-pass-selection:hover:after{
-    width: 18px;
-    height: 18px;
-    left: 0;
+td p{
+    font-size: 15px;
 }
-.note-pass-title{
-    margin-left: 5px;
+td img{
+    width: 200px;
+    height: 250px;
 }
-.submit{
-    margin: 30px 0;
-    float: right;
-
-}
-.user-submit{
-    position: relative;
-    cursor: pointer;
+td input{
+    text-align: center;
+    padding: 10px;
+    outline: none;
     border: none;
-    padding: 10px 70px;
-    background-color: #000;
-    color: #fff;
-    transition: 1s ease-out;
 }
-.user-submit:hover{
-    box-shadow: 3px 5px rgb(117, 117, 117);
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
 }
 
 /* custom-search */
@@ -246,7 +268,7 @@ a{
     text-align: center;
     background-color: #fff;
     border-bottom: 1px solid #000;
-    z-index: 2;
+    z-index: -2;
     transition: .8s ease-in;
 }
 .search-buttons{
@@ -289,7 +311,7 @@ footer{
     border-top: 1px solid #000;
     width: 100%;
     height: 35vh;
-    margin-top: 35vh;
+    margin-top: 25vh;
 }
 .introduce-store{
     display: flex;

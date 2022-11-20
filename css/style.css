@@ -153,12 +153,14 @@ a{
 .dropdown-menu{
     position: absolute;
     top: 300%;
+    /* top: 120%; */
     left: -20px;
     width: 200px;
     padding: 30px 20px;
     background-color: #fff;
     opacity: 0;
-    z-index: -1;
+    display: block;
+    z-index: 1;
     transition: .8s ease-out;
 }
 .dropdown-menu-mobile{
@@ -169,7 +171,7 @@ a{
 .navbar-menu_item-dropdown:hover .dropdown-menu{
     top: 120%; 
     color: red;
-    z-index: 1;
+    z-index: 3;
     opacity: 1;
 }
 .dropdown-menu-lists{
@@ -260,7 +262,7 @@ video {
 .product{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding: 50px 200px;
     max-width: 140rem;
     margin: 0 auto;

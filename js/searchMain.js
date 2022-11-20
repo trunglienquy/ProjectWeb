@@ -8,7 +8,7 @@ const menuMobile = document.querySelector(".navbar-menu")
 const btnSubmenu = document.querySelector(".arrow-down")
 const btnSubmenuUp = document.querySelector(".arrow-up")
 const subMenu = document.querySelector(".dropdown-menu-mobile")
-console.log(showSearch)
+console.log(menuMobile)
 
 showSearch.addEventListener("click", function(){
     searchBox.classList.remove("hide-search")
